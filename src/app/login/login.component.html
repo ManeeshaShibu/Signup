@@ -1,0 +1,23 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="avatar">
+      <img
+        src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png"
+        alt="User Avatar">
+    </div>
+    <form (ngSubmit)="login()" class="login-form">
+      <mat-form-field>
+        <input matInput placeholder="Email" [(ngModel)]="username" name="username" required>
+        <mat-error *ngIf="!username">Please provide a valid email address</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password" required>
+        <mat-error *ngIf="!password">Please provide a valid password</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" [disabled]="!username || !password">Login</button>
+    </form>
+    <div class="text-center login">
+      Already have an account? <a routerLink="/signUp">SignUp</a> here.
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.avatar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar img {
+  width: 100px;
+  height: auto;
+}
+.auth {
+  width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form field style */
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Center the submit button */
+.text-center {
+  text-align: center;
+}
+
+/* Style the sign-up button */
+.btn-my {
+  background-color: #007bff; /* Blue color */
+  color: #fff; /* White text */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-my:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Style the login link */
+.login a {
+  color: #007bff; /* Blue color */
+  text-decoration: none;
+}
+
+/* Add hover styles for the login link */
+.login a:hover {
+  text-decoration: underline;
+}

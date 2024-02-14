@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+  <div class="col-md-6 col-sm-8">
+    <mat-card class="auth">
+      <mat-card-content class="auth-card">
+        <div class="avatar">
+          <img src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png" alt="User Avatar" class="user-image">
+        </div>
+        <form (submit)="signUp()" class="form">
+          <mat-form-field class="form-group">
+            <input matInput type="text" name="name" placeholder="Name" [(ngModel)]="name" required>
+            <mat-error *ngIf="!name">Please provide the Name</mat-error>
+          </mat-form-field>
+          <mat-form-field class="form-group">
+            <input matInput type="text" name="phone" placeholder="Phone" [(ngModel)]="phone" required>
+            <mat-error *ngIf="!phone">Please provide a valid phone no</mat-error>
+          </mat-form-field>
+          <mat-form-field class="form-group">
+            <input matInput type="email" name="email" placeholder="Email" [(ngModel)]="email" required>
+            <mat-error *ngIf="!email">Please provide a valid email address</mat-error>
+          </mat-form-field>
+          <mat-form-field class="form-group">
+            <input matInput type="password" name="password" placeholder="********" [(ngModel)]="password" required>
+            <mat-error *ngIf="!password">Please provide a valid password</mat-error>
+          </mat-form-field>
+          <mat-form-field class="form-group">
+           <input matInput type="password" name="c_password" placeholder="********" [(ngModel)]="confirmPassword" required>
+           <mat-error *ngIf="password !== confirmPassword">Password does not match</mat-error>
+          </mat-form-field>
+          <div class="text-center">
+            <button mat-raised-button type="submit" class="btn btn-my">Sign Up</button>
+          </div>
+          <div class="text-center login">
+            Already have an account? <a routerLink="/login">Login</a> here.
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
